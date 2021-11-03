@@ -6,12 +6,12 @@ import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws StudentNotFoundException {
         List<Double>g1 = List.of(10.0,9.5,9.0,10.0,8.5);
         List<Double>g2 = List.of(9.0,9.5,8.0,6.0,9.5);
         List<Double>g3 = List.of(10.0,9.0,9.0,8.0,8.5);
         List<Double>g4 = List.of(10.0,9.5,9.0,7.0,8.5);
-        List<Double>g5 = List.of(6.0,9.5,9.0,10.0,7.5);
+        List<Double>g5 = List.of(6.0,9.5,75.0,10.0,7.5);
         List<Double>g6 = List.of(10.0,9.5,9.0,10.0,8.5);
         List<Double>g7 = List.of(10.0,9.0,5.0,10.0,10.0);
         List<Double>g8 = List.of(8.0,9.5,9.0,7.0,8.5);
@@ -55,12 +55,18 @@ public class Main {
 
         lecture.enter(ns1);
         lecture.enter(ns2);
-        System.out.println(ns1.getAverageGrade());
-        System.out.println(spikedAvgGrade);
-        System.out.println(spikedAvgGrade1);
-
+//        System.out.println(ns1.getAverageGrade());
+//        System.out.println(spikedAvgGrade);
+//        System.out.println(spikedAvgGrade1);
+        //System.out.println(s1.getstudentGrades());
 //       System.out.println(lecture);
         //System.out.println(s1.getName());
+        Register r1 = new Register(studentList);
+        System.out.println(r1.getHighestGrades());
+        System.out.println(r1.returnStudentByName("Ezekiel"));
+        //System.out.println(r1.getRegisterByLevel(Year.First));
+        //System.out.println(r1.printReport());
+        //System.out.println(r1.getRegisterByLevel(Year.First));
 
 
     }
